@@ -5,36 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <nav>
-        <img src="assets/revou-logo.png" width="100px" height="100px" alt="logo" class="logo">
-        <ul class="nav-items">
-            <li>Home</li>
-            <li>Our Profile</li>
-            <li>Achievement</li>
-            <li>Message Us</li>
-        </ul>
-    </nav>
-    <header>
-        <h1>Hi User, Welcome to Website</h1>
+    <header class="header-wrapper">
+        <nav>
+            <img src="assets/revou-logo.png" class="logo" alt="revou-logo">
+            <!-- <ul class="nav-items">
+                <li>Home</li>
+                <li>Our Profile</li>
+                <li>Achievement</li>
+                <li>Message Us</li>
+            </ul> -->
+            <div class="menu">
+                <button>Home</button>
+                <button>My Profile</button>
+                <button>Achievement</button>
+                <button><a href="#message">Message Us</a></button>
+            </div>
+        </nav>
+
+        <h1>Hi <span id="nama">Nama saya</span>, Welcome To Website</h1>
         <h4>ini adalah website latihan pertama</h4>
-        <img src="assets/city.jpg">
+        <div>
+            <img
+              class="img-slideshow"
+              src="./assets/img1.jpeg"
+            />
+            <img
+              class="img-slideshow"
+              src="./assets/img2.jpeg"
+            />
+            <img
+              class="img-slideshow"
+              src="./assets/img3.jpeg"
+            />
+            <!-- <button onclick="plusDivs(-1)">Previous</button>
+            <button onclick="plusDivs(1)">Next</button> -->
+          </div>    
         <hr>
     </header>
-    <div class="fasilitations">
-        <div>
-            <div class="circle" style="background-image: url('assets/revou-logo.png');"></div>
-            <h4>Profesional Teacher</h4>
+
+    <main class="content">
+        <div class="facility" id="home">
+            <div>
+                <div class="circle" style="background-image: url('./assets/image1.jpeg');"></div>
+                <h4>Profesional Teacher</h4>
+            </div>
+            <div>
+                <div class="circle" style="background-image: url('./assets/image2.jpeg');"></div>
+                <h4>Sport Field</h4>
+            </div>
+            <div>
+                <div class="circle" style="background-image: url('./assets/image3.jpeg');"></div>
+                <h4>Classroom</h4>
+            </div>    
         </div>
-        <div>
-            <div class="circle" style="background-image: url('assets/revou-logo.png');"></div>
-            <h4>Sport Field</h4>
+    
+        <hr>
+        <div class="menu" id="profile">
+            <h2>Our Profile</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa nisi, 
+                mattis ac felis ornare, ultricies posuere odio. Vestibulum eleifend volutpat efficitur. 
+                Donec mollis bibendum nulla vel aliquet. Integer ornare nisl non feugiat pellentesque. 
+                Sed et mauris cursus, egestas dolor a, blandit quam. 
+                Cras bibendum nec mauris sit amet sodales. Ut tellus odio, laoreet vitae ultrices nec, sodales vel leo. 
+                Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam semper vel arcu sit amet maximus. 
+                Nam finibus enim nec laoreet pretium. Nulla tincidunt imperdiet metus in vestibulum. 
+                Aenean est justo, volutpat sit amet aliquet a, faucibus vel sem. Curabitur sem lacus, aliquet sit amet suscipit ac, 
+                porta ultrices risus. Fusce blandit sollicitudin fringilla.
+            </p>
         </div>
-        <div>
-            <div class="circle" style="background-image: url('assets/revou-logo.png');"></div>
-            <h4>Classroom</h4>
-        </div>    
-    </div>
+
+        <hr>
+        <div class="menu" id="Achievement">
+            <h2>Achievement</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa nisi, 
+                mattis ac felis ornare, ultricies posuere odio. Vestibulum eleifend volutpat efficitur. 
+                Donec mollis bibendum nulla vel aliquet. Integer ornare nisl non feugiat pellentesque. 
+                Sed et mauris cursus, egestas dolor a, blandit quam. 
+                Cras bibendum nec mauris sit amet sodales. Ut tellus odio, laoreet vitae ultrices nec, sodales vel leo. 
+                Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam semper vel arcu sit amet maximus. 
+                Nam finibus enim nec laoreet pretium. Nulla tincidunt imperdiet metus in vestibulum. 
+                Aenean est justo, volutpat sit amet aliquet a, faucibus vel sem. Curabitur sem lacus, aliquet sit amet suscipit ac, 
+                porta ultrices risus. Fusce blandit sollicitudin fringilla.
+            </p>
+        </div>
+        
+        <hr>
+        <div class="menu" id="message">
+            <h2>Message Us</h2>
+            
+            <div>
+                <div class="container">
+                    <!-- <h2>ini Form</h2> -->
+                    <div id="form">
+                        <form action="" method="post" name="message" class="message" id="form_message">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label for="nama">Nama :</label>
+                                    <input name="nama" id="nama" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="tgl_lahir">Tanggal Lahir :</label>
+                                    <input type="date" name="tgl_lahir" id="tgl_lahir" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="jenis_kelamin">Jenis Kelamin :</label>
+                                    <input type="radio" name="jenis_kelamin" value="laki_laki" id="laki_laki" for="laki_laki" />
+                                    <label class="label_radio" for="laki_laki">Laki-laki</label>
+                                    <input type="radio" name="jenis_kelamin" value="perempuan" id="perempuan" for="perempuan"/>
+                                    <label class="label_radio" for="perempuan">Perempuan</label>
+                                <div class="form-group">
+                                    <label for="pesan">Pesan :</label>
+                                    <textarea name="pesan" id="pesan" type="text" rows="10" cols="30"></textarea>
+                                </div>
+                                <input name="sendbutton" type="button" class="button" value="Submit" onclick="setResultMessage()" />
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <textarea name="result_pesan" id="result_pesan" type="text" rows="5" cols="50">
+                    </textarea>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+   
 </body>
+<footer>
+    <script src="./js/script.js"></script>
+    <p>Created By Revoue</p>
+</footer>
 </html>

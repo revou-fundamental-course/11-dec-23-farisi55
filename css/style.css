@@ -22,20 +22,66 @@ header {
     text-align: center;
 }
 
-header img {
+    .header-wrapper > nav > .logo {
+        width: auto;
+        height: 40px;
+    }
+
+
+    .header-wrapper > nav > .menu {
+        display: flex;
+    }
+
+    .header-wrapper > nav > .menu > button {
+        background-color: white;
+        padding: 8px 16px;
+        border: 1px solid gray;
+        cursor: pointer;
+        transition: 0.3s background-color ease-out;
+    }
+
+    .header-wrapper > nav > .menu > button:hover {
+        background-color: gainsboro;
+    }
+
+    .header-wrapper > nav > .menu > button:first-child {
+        border-radius: 4px 0 0 4px;
+    }
+
+    .header-wrapper  > nav > .menu > button:last-child {
+        border-radius: 0 4px 4px 0;
+    }
+
+h1 {
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+}
+
+h4 {
+    text-align: left;
+}
+
+/* header img {
     width: 100%;
     height: 400px;
     margin-bottom: 40px;
-}
+} */
 
-.fasilitations {
+.img-slideshow {
+    width: 100%;
+  }
+
+.facility {
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
 }
 
-.fasilitations div {
-    text-align: center;
+.facility div {
+    text-align: left;
 }
 
 .circle {
@@ -46,4 +92,81 @@ header img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#message > div {
+    flex-direction: row;
+    display: flex
+}
+
+ #message > div > div{
+    flex-direction: row;
+    display: flex;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+ }
+
+ #form {
+    background-color: #FFF;
+    height: 600px;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0px;
+    text-align:center;
+}
+
+label {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 18px;
+    color: #333;
+    height: 20px;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: right;
+    margin-right:15px;
+    float:left;
+}
+
+input {
+    height: 20px;
+    width: 300px;
+    border: 1px solid #000;
+    margin-top: 10px;
+}
+
+textarea {
+    height: 100px;
+    width: 300px;
+    border: 1px solid #000;
+    margin-top: 10px;
+}
+
+form input[type="radio"],
+form label[for="laki_laki"],
+form label[for="perempuan"]
+ {
+  clear: none;
+  width: auto;
+}
+
+#result_pesan { 
+    border: 0px solid #f0f040; 
+    background-color: white; 
+    align-content: normal;
+    width: 100%; 
+    height: 250px;
+    padding: 4px; 
+    margin: 5px; }
+
+
+
+footer > p {
+    text-align: end;
+    font-size: x-small;
 }
